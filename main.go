@@ -2,16 +2,18 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/gofiber/fiber"
 	"github.com/harikartha02/go-fiber-crm/database"
+	"github.com/harikartha02/go-fiber-crm/lead"
 	"github.com/jinzhu/gorm"
 )
 
 func setupRoutes(app *fiber.App) {
-	app.Get(GetLeads)
-	app.Post(NewLead)
-	app.Get(GetLead)
-	app.Delete(DeleteLead)
+	app.Get("/api/v1/lead", lead.GetLeads)
+	app.Post("/api/v1/lead", lead.NewLead)
+	app.Get("/api/v1/lead/:id", lead.GetLead)
+	app.Delete("/api/v1/lead/:id", lead.DeleteLead)
 }
 
 func initDatabase() {
