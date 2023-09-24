@@ -3,17 +3,16 @@ package lead
 import (
 	"github.com/gofiber/fiber"
 	"github.com/harikartha02/go-fiber-crm/database"
-	"github.com/harikartha02/go-fiber-crm/lead"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
 
 type Lead struct {
 	gorm.Model
-	Name    string
-	Company string
-	Email   string
-	Phone   int
+	Name    string `json:"name"`
+	Company string `json:"company"`
+	Email   string `json:"email"`
+	Phone   int    `json:"phone"`
 }
 
 func GetLeads(c *fiber.Ctx) {
