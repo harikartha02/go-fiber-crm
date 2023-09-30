@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/gofiber/fiber"
-	"github.com/harikartha02/go-fiber-crm/database"
+	database "github.com/harikartha02/go-fiber-crm/database"
 	"github.com/harikartha02/go-fiber-crm/lead"
 	"github.com/jinzhu/gorm"
 )

@@ -2,7 +2,7 @@ package lead
 
 import (
 	"github.com/gofiber/fiber"
-	"github.com/harikartha02/go-fiber-crm/database"
+	database "github.com/harikartha02/go-fiber-crm/database"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
 )
